@@ -1,15 +1,18 @@
 /* --- RESET E BASI --- */
 :root {
-    --bg-primary: #f0f2f5;
-    --bg-card: #ffffff;
-    --text-primary: #333;
-    --text-secondary: #555;
-    --accent-dark: #37475a;
-    --accent-light: #5a7b9c;
-    --accent-btn: #e0f2fe; /* Un celeste chiaro */
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Montserrat', sans-serif;
-    --max-width: 1100px;
+    --bg-primary: #f4f6f8; /* Sfondo grigio chiaro come nello screenshot */
+    --bg-card: #ffffff;    /* Sfondo bianco delle card */
+    --text-primary: #2d3e50; /* Colore testo scuro ma non nero puro */
+    --text-secondary: #637381; /* Grigio per i dettagli meno importanti */
+    --accent-dark: #37475a;   /* Colore scuro dell'header */
+    --accent-light: #5c6c7c;  /* Un grigio medio per i link */
+    --btn-blue: #0ea5e9;     /* Un celeste vivace per il bottone */
+    
+    --font-heading: 'Playfair Display', serif; /* Font per i titoli */
+    --font-body: 'Montserrat', sans-serif;    /* Font per il corpo del testo */
+    
+    --max-width: 1000px;
+    --border-radius: 12px; /* Arrotondamento degli angoli */
 }
 
 body, html {
@@ -18,7 +21,8 @@ body, html {
     font-family: var(--font-body);
     background-color: var(--bg-primary);
     color: var(--text-primary);
-    scroll-behavior: smooth; /* Scrolling morbido */
+    scroll-behavior: smooth;
+    line-height: 1.6;
 }
 
 .container {
@@ -39,41 +43,47 @@ a {
 }
 
 a:hover {
-    color: var(--accent-dark);
+    color: #111;
 }
 
 /* --- ELEMENTI COMUNI --- */
+
+/* CARD BIANCHE (Lo stile chiave dello screenshot) */
 .card {
     background-color: var(--bg-card);
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     padding: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Ombra leggera */
+    margin-bottom: 25px;
+    border: 1px solid #e2e8f0; /* Un leggero bordo grigio */
 }
 
+/* PULSANTE DOWNLOAD */
 .btn-download {
-    background-color: var(--accent-btn);
-    color: var(--accent-dark);
-    padding: 10px 20px;
+    background-color: var(--btn-blue);
+    color: white !important;
+    padding: 10px 24px;
     border-radius: 25px;
     font-weight: 600;
-    transition: background 0.3s, transform 0.2s;
+    font-size: 0.95rem;
+    transition: background-color 0.3s, transform 0.2s;
     font-family: var(--font-body);
 }
 
 .btn-download:hover {
-    background-color: #bee3f8;
-    transform: translateY(-2px);
+    background-color: #0c87bf;
+    transform: translateY(-1px);
 }
 
 /* --- HEADER --- */
 header {
     background-color: var(--accent-dark);
     color: white;
-    padding: 20px 0;
-    position: sticky; /* L'header si muove con te */
+    padding: 18px 0;
+    position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .header-content {
@@ -85,38 +95,39 @@ header {
 .profile-main {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 18px;
 }
 
 .profile-pic {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #fff;
+    border: 2px solid white;
 }
 
 .name-title h1 {
-    font-size: 2.2rem;
-    margin-bottom: 5px;
+    font-size: 1.9rem;
+    margin-bottom: 4px;
     color: white;
 }
 
 .name-title .title {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     margin: 0;
     opacity: 0.85;
 }
 
 nav {
     display: flex;
-    gap: 15px;
+    gap: 16px;
     align-items: center;
 }
 
 nav a:not(.btn-download) {
     color: #e2e8f0;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 nav a:not(.btn-download):hover {
@@ -125,14 +136,14 @@ nav a:not(.btn-download):hover {
 
 /* --- MAIN --- */
 main {
-    padding: 50px 0;
+    padding: 40px 0;
 }
 
 section h2 {
     color: var(--accent-dark);
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 }
 
 /* Profilo Section */
@@ -145,33 +156,42 @@ section h2 {
     flex: 2;
 }
 
+.profile-info h2 {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
 .profile-details {
     flex: 1;
-    border-left: 2px solid #e2e8f0;
+    border-left: 1px solid #e2e8f0;
     padding-left: 30px;
 }
 
 .profile-details h3 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: var(--accent-light);
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .profile-details ul {
     list-style: none;
     padding: 0;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: var(--text-secondary);
 }
 
 .profile-details li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
-/* Experience Section */
+/* Experience Section (Il layout pulito per le card) */
+.experience-section h2 {
+    margin-bottom: 40px;
+}
+
 .timeline-item {
-    padding-bottom: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 20px; /* Spazio tra le card */
 }
 
 .timeline-header {
@@ -185,67 +205,78 @@ section h2 {
 
 .timeline-header h3 {
     margin: 0;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    color: var(--accent-dark);
 }
 
 .company-info {
     margin: 0;
     color: var(--text-secondary);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 500;
 }
 
 .company-info .date {
     font-weight: 600;
+    color: var(--text-primary);
 }
 
 .timeline-details {
     list-style: square;
     padding-left: 20px;
     color: var(--text-secondary);
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.95rem;
 }
 
 .timeline-details li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 /* Skills Section */
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px;
     justify-content: center;
 }
 
 .skill-tag {
-    background-color: var(--accent-btn);
-    color: var(--accent-dark);
+    background-color: #e0f2fe; /* Celeste chiarissimo per i tag */
+    color: #0c87bf;
     padding: 8px 18px;
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
     font-family: var(--font-body);
+    border: 1px solid #bae6fd;
 }
 
 /* --- FOOTER --- */
 footer {
-    background-color: #2c3e50;
+    background-color: #2a3b4c;
     color: #e2e8f0;
-    padding: 30px 0;
-    margin-top: 50px;
+    padding: 25px 0;
+    margin-top: 40px;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .footer-links {
     display: flex;
-    gap: 15px;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: #e2e8f0;
+}
+
+.footer-links a:hover {
+    color: white;
 }
 
 /* --- MEDIA QUERIES (Mobile) --- */
@@ -262,12 +293,12 @@ footer {
     }
 
     .name-title h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .profile-pic {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
 
     .profile-details {
@@ -279,5 +310,6 @@ footer {
     .timeline-header {
         flex-direction: column;
         align-items: flex-start;
+        text-align: left;
     }
 }
