@@ -1,12 +1,130 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriele Veneri - Software Development Engineer in Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Gabriele Veneri - Curriculum Vitae</h1>
 
-    <iframe src="cv_veneri.pdf" width="100%" height="800px"></iframe>
+    <header>
+        <div class="header-content container">
+            <div class="profile-main">
+                <img src="ritratto.jpg" alt="Gabriele Veneri" class="profile-pic">
+                <div class="name-title">
+                    <h1>Gabriele Veneri</h1>
+                    <p class="title">Software Development Engineer in Test | QA Automation Expert</p>
+                </div>
+            </div>
+            <nav>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+                <a href="cv_veneri.pdf" class="btn-download" target="_blank">Download CV (PDF)</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section id="profile" class="profile-section card">
+            <div class="profile-info">
+                <h2>Professional Profile</h2>
+                <p>SDET & QA Automation Expert with 15+ years of experience across Fintech, Enterprise Software, and Ad-Tech. My mission is to accelerate the SDLC by building resilient automated test infrastructures that shift quality to the left.</p>
+                <p>I specialize in Playwright (TypeScript) and Robot Framework (Python), seamlessly integrated into high-frequency CI/CD pipelines.</p>
+            </div>
+            <div class="profile-details">
+                <h3>Contact Details</h3>
+                <ul>
+                    <li><a href="mailto:venerig@gmail.com">venerig@gmail.com</a></li>
+                    <li><a href="tel:+393397606873">+39 339 76 06 873</a></li>
+                    <li><a href="https://www.linkedin.com/in/gabriele-veneri-66505222" target="_blank">LinkedIn Profile</a></li>
+                </ul>
+                <h3>Personal Info</h3>
+                <ul>
+                    <li>Citizenship: Italian</li>
+                    <li>Languages: English (Professional), Italian (Native)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="experience" class="experience-section">
+            <h2>Experience</h2>
+            
+            <div class="timeline-item card">
+                <div class="timeline-header">
+                    <h3>Software Development Engineer in Test</h3>
+                    <p class="company-info">Facile.it (Italy) | <span class="date">2020.04 - Pres.</span></p>
+                </div>
+                <ul class="timeline-details">
+                    <li><strong>Automation Strategy:</strong> Spearheaded the transition to Playwright with TypeScript, increasing execution speed and reducing flakiness.</li>
+                    <li><strong>CI/CD Integration:</strong> Architected automated testing pipelines within GitLab CI/CD for seamless E2E and integration testing.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item card">
+                <div class="timeline-header">
+                    <h3>Google Preview Trusted Tester</h3>
+                    <p class="company-info">Google (Remote) | <span class="date">2017.07 - Pres.</span></p>
+                </div>
+                <ul class="timeline-details">
+                    <li><strong>Early Access Validation:</strong> Perform alpha/beta testing for Google Maps features, identifying critical edge cases before public rollouts.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item card">
+                <div class="timeline-header">
+                    <h3>QA Engineer</h3>
+                    <p class="company-info">BMC Software (Milan) | <span class="date">2017.10 - 2020.03</span></p>
+                </div>
+                <ul class="timeline-details">
+                    <li><strong>Framework Development:</strong> Scaled automation suites using Robot Framework and Python for complex enterprise web solutions.</li>
+                    <li><strong>Pipeline Management:</strong> Integrated suites into Jenkins on Windows, reducing manual regression time by over 60%.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item card">
+                <div class="timeline-header">
+                    <h3>QA Engineer</h3>
+                    <p class="company-info">TheOutplay (Milan) | <span class="date">2015.10 - 2017.10</span></p>
+                </div>
+                <ul class="timeline-details">
+                    <li><strong>Infrastructure:</strong> Leveraged Docker and VM to create isolated test environments for web and mobile applications.</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section id="skills" class="skills-section card">
+            <h2>Core Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Playwright</span>
+                <span class="skill-tag">Robot Framework</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">CI/CD Pipelines</span>
+                <span class="skill-tag">GitLab CI / Jenkins</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Test Automation Architecture</span>
+                <span class="skill-tag">Agile / Scrum</span>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <div class="container footer-content">
+            <p>&copy; 2026 Gabriele Veneri. Personal CV Page.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/gabriele-veneri-66505222" target="_blank">LinkedIn</a>
+                <a href="mailto:venerig@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
-</html>    
+</html>
